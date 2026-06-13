@@ -1,0 +1,62 @@
+#Name and department Display
+Name = "Shakthi"
+Department = "Biomeddical Engineering"
+print(Name)
+print(Department)
+
+#Add Two numbers
+a=int(input("enter a number: "))
+b=int(input("enter a number: "))
+c=(a+b)
+print(c)
+
+#Multiply Two numbers
+
+a=int(input("Enter a number: "))
+b=int(input("Enter a number: "))
+c = a*b
+print(c)
+
+#BMI Calculator
+a =int(input("Enter the weight(in kg): "))
+b =float(input("Enter the height(in m): "))
+BMI = a/(b**2)
+print(BMI)
+
+#Simple Interest
+a = float(input("Enter the Principle Amount: "))
+b = float(input("Enter the Rate of Interest: "))
+c = float(input("Enter the Time: "))
+SI=(a*b*c/100)
+print(SI)
+
+#Celsius to Fahrenheit
+a = float(input("Enter the Celsius: "))
+b = ((9/5)*a + 32)
+print(b)
+
+#Area of circle
+a= float(input("Enter radius: "))
+b= 3.14*(a**2)
+print(b)
+
+#Area of rectangle
+a = float(input("Enter the length: "))
+b = float(input("Enter the breath: "))
+area = a*b
+print(area)
+
+#Kilometer to Meter converter
+a =int(input("Enter the Kilometer: "))
+b =a*1000
+print(b)
+
+#percentage Calculator
+a = int(input("Enter the Tamil mark: "))
+b = int(input("Enter the English mark: "))
+c = int(input("Enter the Maths mark: "))
+d = int(input("Enter the Science mark: "))
+e = int(input("Enter the Social mark: "))
+f =(a+b+c+d+e/500)*100
+print(f)
+        
