@@ -1,0 +1,74 @@
+#Odd or Even
+a = int(input("Enter a number : "))
+if(a % 2 !=0):
+    print("Odd")
+else:
+    print("Even")
+#odd=(number % 2 !=0)
+#even=(number % 2 ==0)
+
+#A person is eligible to vote
+a =int(input("Enter the age of the person : "))
+if(a >= 18):
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+
+#Largest of two numbers
+a=int(input("Enter the number : "))
+b=int(input("Enter the number : "))
+if(a>b):
+    print(" a is greater ")
+elif(a==b):
+    print(" a and b are equal ")
+else:
+    print(" b is greater ")
+
+#Largest of three numbers
+a=int(input("Enter the number : "))
+b=int(input("Enter the number : "))
+c=int(input("Enter the number : "))
+if(a>b>c):
+    print(" A  is greater ")
+elif(a<b>c):
+    print(" B is greater ")
+else:
+    print(" C is greater ")
+
+#Positive, Negative, Zero
+a = int(input("Enter a number : "))
+if(a < 0):
+    print(" Negative ")
+elif(a > 0):
+    print(" Positive ")
+elif(a == 0):
+    print(" Zero ")
+else:
+    print(" Not a number ")
+
+#Grade Calculator
+a = int(input("Enter the mark : "))
+if(a>=90):
+    print("Grade A")
+elif(a>=80):
+    print("Grade B")
+elif(a>=70):
+    print("Grade C")
+elif(a<70):
+    print("Grade D")
+
+#Leap Year Checker
+a=int(input("Enter the year: "))
+if(a % 4==0):
+      print("Leap year")
+else:
+    print("Not a leap year")
+
+#Whether a number is divisible by 5 and 11
+a = int(input("Enter a number : "))
+if(a % 5==0):
+    print("Number is divisible by 5")
+elif(a % 11==0):
+    print("Number is divisible by 11")
+else:
+    print("Not divisible by 5 or 11")
