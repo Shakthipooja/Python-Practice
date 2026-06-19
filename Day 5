@@ -1,0 +1,55 @@
+#List of 5 numbers
+a = list(map(int,input("Enter the list of numbers: ").split()))
+print(a)
+
+#The largest number in a list
+a= list(map(int,input("Enter the list of numbers: ").split()))
+print(max(a))
+
+#Smallest number in a list
+a= list(map(int,input("Enter the list of numbers: ").split()))
+print(min(a))
+
+#Sum of all elements
+a= list(map(float,input("Enter the list of numbers: ").split()))
+print(sum(a))
+
+#Average in the list
+a = list(map(float,input("Enter the numbers in the list: ").split()))
+average = sum(a)/len(a)
+print("Average =", average)
+
+#Count the number of odd and even
+a=list(map(int,input("Enter the numbers in the list: ").split()))
+even_count=0
+odd_count=0
+for num in a:
+    if num % 2 ==0:
+        even_count += 1
+    else:
+        odd_count += 1
+print("Even = ",even_count)
+print("Odd = ",odd_count)
+
+#Reverse the list
+a=list(map(int,input("Enter the list: ").split()))
+a.reverse()
+print(a)
+
+#List in the ascending order
+a=list(map(int,input("Enter the numbers: ").split()))
+a.sort()
+print(a)
+
+#Remove the duplicate element
+a=list(map(int,input("Enter the numbers: ").split()))
+a1=list(set(a))
+print(a1)
+
+#Wheather a given number exists in the list
+a= [10, 20, 30 ,40]
+b = int(input("Enter the number: "))
+if b in a:
+    print("NUMBER ALREADY EXISTS")
+else:
+    print("NOT FOUND")
