@@ -1,0 +1,85 @@
+#Function to add two numbers
+def add(a,b):
+    return a + b
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+result = add(a,b)
+print(result)
+
+#Function to subtract two numbers
+def sub(a,b):
+    return a - b
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+result = sub(a,b)
+print(result)
+
+#Function to muultiply two numbers
+def multiply(a,b):
+    return a * b
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+result = multiply(a,b)
+print("a * b = ",result)
+
+#Function to find a square of a number
+def square(num):
+    return num*num
+num = int(input("Enter a number: "))
+result = square(num)
+print(result)
+
+#Function to check odd or even
+def check_even_odd(n):
+    if n % 2 ==0:
+        return"Even"
+    else:
+        return "Odd"
+number = int(input("Enter a number: "))
+print(check_even_odd(number))
+
+#Function to calculate area of a circle
+def area(radius):
+    pi = 3.14
+    return pi* radius* radius
+radius= float(input("Enter the radius: "))
+print("Area = ",area(radius))
+
+#Function to calculate the Factorial of a number
+
+def factorial(n):
+    result = 1
+    for i in range(1,n+1):
+        result = result * i
+    return result
+number = int(input("Enter a number : "))
+print("Factorial = ",factorial(number))
+
+#Function of Menu - Driven Calculator using Functions
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def multiply(a,b):
+    return a*b
+def divide(a,b):
+    return a/b
+print("1. ADD")
+print("2. SUB")
+print("3. MULTIPLY")
+print("4. DIVIDE")
+
+choice = int(input("Enter a choice: "))
+a= int(input("Enter a number: "))
+b= int(input("Enter a number: "))
+
+if(choice == 1):
+    print("Result = ",add(a,b))
+elif(choice == 2):
+    print("Result = ",sub(a,b))
+elif(choice == 3):
+    print("Result = ",multiply(a,b))
+elif(choice == 4):
+    print("Result = ",divide(a,b))
+else:
+    print("Invalid Choice")
