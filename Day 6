@@ -1,0 +1,60 @@
+#String in reverse order
+text = input("Enter a string: ")
+print(text[::-1])
+
+#If a string is pallidrome
+text = input("Enter the string: ")
+if(text == text[::-1]):
+    print("String is pallidrome")
+else:
+    print("Not a pallidrome")
+
+#Count the vowels in the string
+text = input("Enter a string : ").lower()
+count = 0
+for ch in text:
+    if ch in "aeiou":
+        count+=1
+print("Vowels =",count)
+
+#Count consonents in the string
+text = input("Enter a string: ").lower()
+count=0
+for ch in text:
+    if ch.isalpha() and ch not in "aeiou":
+             count +=1
+print("consonents = ",count)
+
+#Count the words in a sentence
+text = input("Enter the sentence: ")
+words = text.split()
+print("Number of words : ",len(words))
+
+#Count the frequency of a charecter
+text = input("Enter the string: ")
+character = input("Enter the character: ")
+count =text.count(character)
+print("Frequency= ",count)
+
+#Convert into higher of lower
+text = input("Enter the string: ")
+print("Uppercase:",text.upper())
+print("Lowercase:",text.lower())
+
+#Replace spaces with hyphens
+text = input("Enter the sentence: ")
+print(text.replace(" ","-"))
+
+#Find the longest word in the sentence
+text = input("Enter the sentence: ")
+words=text.split()
+longest = max(words, key=len)
+print("Longest word =",longest)
+
+#Check wheather two strings are anagrams
+first = input("Enter first string: ")
+second = input("Enter second string: ")
+if sorted(first)==sorted(second):
+    print("Anagram")
+else:
+    print("Not anagram")
