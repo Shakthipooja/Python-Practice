@@ -1,0 +1,94 @@
+#Creating a dictionary
+student = {
+    "name" : "Shakthi",
+    "age" : 19,
+    "CGPA" :8.45
+}
+print(student)
+
+#Add a new field
+student = {
+    "name" : "Shakthi",
+    "Age" : 19,
+    "CGPA": 8.45
+}
+student["department"]="Biomedical Engineering"
+print(student)
+
+#Update the cgpa
+student = {
+    "name" : "Shakthi",
+    "age" : 19,
+    "cgpa" : 8.45
+}
+student["cgpa"]= 9.2
+print(student)
+
+#Delete one key
+student = {
+    "name" :"Shakthi",
+    "age" :19,
+    "Cgpa" :8.45
+}
+student.pop("age")
+del student["Cgpa"]
+print(student)
+
+#Print all keys
+student = {
+    "name" : "Shakthi",
+    "age" : 19,
+    "Cgpa" : 8.45
+}
+print(student.keys())
+
+#Print all values
+student = {
+    "name" : "Shakthi",
+    "age" : 19,
+    "Cgpa" : 8.45
+}
+print(student.values())
+
+#Print all Key value pairs
+student = {
+    "name" : "Shakthi",
+    "age" : 19,
+    "Cgpa" : 8.45
+}
+for key, value in student.items():
+    print(key,":",value)
+
+#Count charecter frequency using dictionary
+text = input("Enter a string : ")
+frequency = {}
+for ch in text:
+    if ch in frequency:
+        frequency[ch]+=1
+    else:
+        frequency[ch]=1
+print(frequency)
+
+#Simple Phone book
+phone_book = {}
+phone_book["Shakthi"] = "9597693293"
+phone_book["pooja"] = "8072861873"
+name = input("Enter the name: ")
+if name in phone_book:
+    print("Phone number: ",phone_book[name])
+else:
+    print("Contact not found")
+
+#Store marks for 5 subjects and calculate average
+marks = {
+    "MATHS" : 86,
+    "TAMIL" : 91,
+    "ENGLISH" : 91,
+    "SCIENCE" : 85,
+    "SOCIAL SCIENCE" : 80
+}
+total = sum(marks.values())
+average = total / len(marks)
+
+print("Total =",total)
+print("Average =",average)
