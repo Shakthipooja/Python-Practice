@@ -1,0 +1,14 @@
+# Create a set of patient IDs with duplicates
+patient_ids = {101, 102, 103, 101, 104, 102, 105}
+
+# Print the set
+print("Patient IDs:", patient_ids)
+
+# Patient IDs stored in a list with duplicates
+patient_list = [101, 102, 103, 101, 104, 102, 105]
+print("Original List:", patient_list)
+
+# Convert the list to a set
+unique_patients = set(patient_list)
+print("Unique Patient IDs:", unique_patients)
+
