@@ -1,0 +1,53 @@
+#Tuple programs
+#Create a tuple and print all the elements
+student = ("Engineer", 20, "Biomedical")
+print(student)
+#loop
+for item in student:
+    print(item)
+#accesing first and last element
+student = ("Engineer" , 20 ,"Biomedical")
+print("First element: ",student[0])
+print("Last element: ",student[-1])
+#Count the element that appears
+a = (10,20,30,10,20,20)
+print(a.count(10))
+#Find the index of an element
+a = (10,20,30,40)
+print(a.index(30))
+#Convert list into tuple
+numbers_list = [10,20,30,40]
+numbers_tuple = tuple(numbers_list)
+print(numbers_tuple)
+
+#Set programs
+#remove duplicates from list using a set
+a = [10,20,30,40,40,30,20]
+unique_numbers = set(a)
+print(unique_numbers)
+
+#Find the union of two sets
+set1 = {1,2,3}
+set2 = {3,4,5}
+result = set1.union(set2)
+print(result)
+
+#intersection of two sets
+set1 = {1,2,3}
+set2 = {2,3,4}
+result = set1.intersection(set2)
+print(result)
+
+#difference of two sets
+set1= {1,2,3}
+set2={2,3,4}
+result = set1.difference(set2)
+print(result)
+
+#Whether an element exsists in a set
+numbers = {10,20,30,40}
+search = int(input("Enter a number: "))
+if search in numbers:
+    print("Elemnts found")
+else:
+    print("Not found")
