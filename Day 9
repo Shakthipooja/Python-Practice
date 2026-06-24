@@ -1,0 +1,52 @@
+#Create a text file
+with open("name.txt", "w") as file:
+    file.write("Shakthi Pooja")
+#Read and print a file
+with open("name.txt","r")as file:
+    print(file.read())
+#Append a new line to a file
+with open("name.txt","a") as file:
+    file.write("\nBiomedical Engineering")
+#Count the number of lines
+with open("name.txt", "r") as file:
+    lines = file.readlines()
+print("Number of lines:", len(lines))
+#Count the number of words
+with open("name.txt", "r") as file:
+    text = file.read()
+words = text.split()
+print("Number of words:", len(words))
+#Count the number of characters
+with open("name.txt", "r") as file:
+    text = file.read()
+print("Number of characters:", len(text))
+#Copy one file to another
+with open("name.txt", "r") as source:
+    content = source.read()
+with open("copy.txt", "w") as destination:
+    destination.write(content)
+print("File copied successfully.")
+#Search for a word in a file
+word = input("Enter the word to search: ")
+with open("name.txt", "r") as file:
+    text = file.read()
+if word in text:
+    print("Word found")
+else:
+    print("Word not found")
+#Replace a word in a file
+with open("name.txt", "r") as file:
+    text = file.read()
+text = text.replace("Biomedical", "Medical")
+with open("name.txt", "w") as file:
+    file.write(text)
+print("Word replaced successfully.")
+#Store student details in a text file
+name = input("Enter student name: ")
+age = input("Enter age: ")
+department = input("Enter department: ")
+with open("student.txt", "w") as file:
+    file.write("Name: " + name + "\n")
+    file.write("Age: " + age + "\n")
+    file.write("Department: " + department + "\n")
+print("Student details saved successfully.")
