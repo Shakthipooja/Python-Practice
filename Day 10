@@ -1,0 +1,90 @@
+#Handle Division by zero
+try:
+    a=int(input("Enter the numerator : "))
+    b=int(input("Enter the denominator: "))
+    result = a/b
+    print("Result = ",result)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+#Handle Invalid Integer Input
+try:
+    number = int(input("Enter an integer: "))
+    print("You entered: ",number)
+except ValueError:
+    print("Error: Please enter a valid integer."
+
+#Handle File not found
+try:
+    with open("sample.txt","r")as file:
+        print(file.read())
+except FileNotFoundError:
+    print("Error: File not found.")
+
+#Handle Multiple Exceptions
+try:
+    number = int(input("Enter a number: "))
+    print(100 / number)
+except ValueError:
+    print("Error: Invalid integer.")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+#Finally to print a completion message
+try:
+    number = int(input("Enter a number: "))
+    print(100 / number)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+finally:
+    print("Program execution completed.")
+
+#Safe calculator
+try:
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    operator = input("Enter operator (+, -, *, /): ")
+
+    if operator == "+":
+        print("Result =", num1 + num2)
+
+    elif operator == "-":
+        print("Result =", num1 - num2)
+
+    elif operator == "*":
+        print("Result =", num1 * num2)
+
+    elif operator == "/":
+        print("Result =", num1 / num2)
+
+    else:
+        print("Invalid operator.")
+except ValueError:
+    print("Please enter valid numbers.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+#Read a file with Exception with Exception Handling
+try:
+    with open("notes.txt","r")as file:
+        print(file.read())
+except FileNotFoundError:
+    print("The file does not exsists.")
+
+#Ask for Age and Validate Numeric Input
+try:
+    age = int(input("Enter your age: "))
+    print("Your age is", age)
+except ValueError:
+    print("Please enter your age as a number.")    
+
+#Validate Age range
+try:
+    age = int(input("Enter your age: "))
+    if age < 0:
+        print("Age cannot be negative.")
+    else:
+        print("Your age is",age)
+except ValueError:
+    print("Please enter a valid integer.")
