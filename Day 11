@@ -1,0 +1,138 @@
+#Student class
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def display(self):
+        print("Name: ",self.name)
+        print("Age: ",self.age)
+student1 = Student("Shakthi",20)
+student1.display()
+#Employee Class
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+    def display(self):
+        print("Employee name: ",self.name)
+        print("Salary: ",self.salary)
+emp1 = Employee("Ravi",50000)
+emp1.display()
+#Book class
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+    def display(self):
+        print("Title:", self.title)
+        print("Author:", self.author)
+book1 = Book("Python Basics", "John")
+book1.display()
+#Car Class
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    def display(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+car1 = Car("Toyota", "Innova")
+car1.display()
+#Hospital Class
+class Hospital:
+    def __init__(self, hospital_name, location):
+        self.hospital_name = hospital_name
+        self.location = location
+    def display(self):
+        print("Hospital:", self.hospital_name)
+        print("Location:", self.location)
+h1 = Hospital("Apollo", "Chennai")
+h1.display()
+#Patient class
+class Patient:
+    def __init__(self, name, age, disease):
+        self.name = name
+        self.age = age
+        self.disease = disease
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Disease:", self.disease)
+patient1 = Patient("Arun", 45, "Diabetes")
+patient1.display()
+#Medical Device Class
+class MedicalDevice:
+    def __init__(self, device_name, manufacturer, cost):
+        self.device_name = device_name
+        self.manufacturer = manufacturer
+        self.cost = cost
+    def display(self):
+        print("Device:", self.device_name)
+        print("Manufacturer:", self.manufacturer)
+        print("Cost:", self.cost)
+device1 = MedicalDevice("ECG Machine", "Philips", 50000)
+device1.display()
+#Doctor Class
+class Doctor:
+    def __init__(self, name, specialization):
+        self.name = name
+        self.specialization = specialization
+    def display(self):
+        print("Doctor:", self.name)
+        print("Specialization:", self.specialization)
+doctor1 = Doctor("Dr. Kumar", "Cardiology")
+doctor1.display()
+#Multiple student Objects
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def display(self):
+        print(self.name, self.age)
+student1 = Student("Shakthi", 20)
+student2 = Student("Rahul", 21)
+student3 = Student("Priya", 19)
+student1.display()
+student2.display()
+student3.display()
+#Menu - Driven Patient Management System
+class Patient:
+    def __init__(self, name, age, disease):
+        self.name = name
+        self.age = age
+        self.disease = disease
+    def display(self):
+        print("\nPatient Details")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Disease:", self.disease)
+while True:
+    print("\n1. Add Patient")
+    print("2. Exit")
+    choice = int(input("Enter choice: "))
+    if choice == 1:
+        name = input("Enter name: ")
+        age = int(input("Enter age: "))
+        disease = input("Enter disease: ")
+        patient = Patient(name, age, disease)
+        patient.display()
+    elif choice == 2:
+        print("Program Ended")
+        break
+    else:
+        print("Invalid Choice")
+#Bonus challenge
+class Sensor:
+    def __init__(self, sensor_name, sensor_type, accuracy):
+        self.sensor_name = sensor_name
+        self.sensor_type = sensor_type
+        self.accuracy = accuracy
+    def display(self):
+        print("Sensor name: ", self.sensor_name)
+        print("Sensor type: ", self.sensor_type)
+        print("Accuracy: ",str(self.accuracy)+ "%")
+
+sensor1 = Sensor("Pulse oximeter", "Optical", 98)
+sensor1.display()
+        
+    
