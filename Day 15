@@ -1,0 +1,197 @@
+#Number is prime
+number = int(input("Enter a number: "))
+if number <=1:
+    print("Not prime")
+else:
+    is_prime = True
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print("Prime number")
+    else:
+        print("Not a prime")
+#Fabonacci series
+n = int(input("Enter number of terms: "))
+a = 0
+b = 1
+print("Fabonacci series: ")
+for i in range(n):
+    print(a, end=" ")
+    c = a + b
+    a = b
+    b = c
+#Largest element in a list
+numbers = [10, 45, 90, 34, 67]
+largest = max(numbers)
+print("Largest element = ",largest)
+#Count vowels in a string
+text = input("Enter a string: ")
+count = 0
+for letter in text.lower():
+    if letter in "aeiou":
+        count += 1
+print("Number of vowels =", count)
+#Remove Duplicates from a list
+numbers = [10, 20, 30, 20, 40, 30, 50]
+unique = list(set(numbers))
+print(unique)
+#Functions
+#Calculate using Functions
+def add(a, b):
+    return a + b
+def subtract(a, b):
+    return a - b
+def multiply(a, b):
+    return a * b
+def divide(a, b):
+    return a / b
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Addition =", add(a, b))
+print("Subtraction =", subtract(a, b))
+print("Multiplication =", multiply(a, b))
+print("Division =", divide(a, b))
+#Dictionary
+#Student record system
+student = {
+    "Name": "Shakthi",
+    "Age": 20,
+    "CGPA": 8.9
+}
+print("Student Details")
+for key, value in student.items():
+    print(key, ":", value)
+#File Haandling
+with open("patients.txt", "w") as file:
+    file.write("P001,Ramesh,Diabetes\n")
+    file.write("P002,Priya,Asthma\n")
+with open("patients.txt", "r") as file:
+    data = file.read()
+    print(data)
+#Patient Class
+class Patient:
+    def __init__(self,
+                 name,
+                 age,
+                 disease):
+        self.name = name
+        self.age = age
+        self.disease = disease
+    def display(self):
+
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Disease:", self.disease)
+patient1 = Patient(
+    "Ramesh",
+    45,
+    "Diabetes"
+)
+patient1.display()
+#Hospital Management System
+class Patient:
+    def __init__(self,
+                 patient_id,
+                 name,
+                 disease):
+        self.patient_id = patient_id
+        self.name = name
+        self.disease = disease
+    def display(self):
+        print(
+            self.patient_id,
+            self.name,
+            self.disease
+        )
+patients = []
+def add_patient():
+    patient_id = input(
+        "Enter Patient ID: "
+    )
+    name = input(
+        "Enter Name: "
+    )
+    disease = input(
+        "Enter Disease: "
+    )
+    patient = Patient(
+        patient_id,
+        name,
+        disease
+    )
+    patients.append(patient)
+    print("Patient Added")
+def display_patient():
+    if len(patients) == 0:
+        print("No Patients")
+        return
+    for patient in patients:
+        patient.display()
+def search_patient():
+    search = input(
+        "Enter Patient ID: "
+    )
+    for patient in patients:
+        if patient.patient_id == search:
+            patient.display()
+            return
+    print("Patient Not Found")
+def delete_patient():
+    delete = input(
+        "Enter Patient ID: "
+    )
+    for patient in patients:
+        if patient.patient_id == delete:
+            patients.remove(patient)
+            print(
+                "Patient Deleted"
+            )
+            return
+    print(
+        "Patient Not Found"
+    )
+def save_patient():
+    with open(
+        "patients.txt",
+        "w"
+    ) as file:
+        for patient in patients:
+            file.write(
+                f"{patient.patient_id},"
+                f"{patient.name},"
+                f"{patient.disease}\n"
+            )
+    print(
+        "Saved Successfully"
+    )
+while True:
+    print("\n1.Add Patient")
+    print("2.Search Patient")
+    print("3.Display Patient")
+    print("4.Delete Patient")
+    print("5.Save Patient")
+    print("6.Exit")
+    choice = int(
+        input(
+            "Enter choice: "
+        )
+    )
+    if choice == 1:
+        add_patient()
+    elif choice == 2:
+        search_patient()
+    elif choice == 3:
+        display_patient()
+    elif choice == 4:
+        delete_patient()
+    elif choice == 5:
+        save_patient()
+    elif choice == 6:
+        break
+    else:
+        print(
+            "Invalid Choice"
+        )
+              
